@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+        <script type="text/javascript" src="https://unpkg.com/downloadjs@1.4.7/download.js"></script>
+        <link rel="stylesheet" href="pdf.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>PDF-Baba</title>
+    </head>
+
+    <body>
+        <div class="nav">
+            <span class="logo">
+            <i class="fa fa-file-pdf-o"></i> <i style="text-shadow: white 0px 3px 8px;;">PDF-Baba</i>  <i class="fa fa-leaf"></i><sub style="font-size: small;"><i>we make pdf</i> </sub>
+            </span>
+            <div>
+            <button id="convertBtn" convertBtn={convertBtn} onClick={embedImages()}>SAVE AS PDF</button>
+            <h2 id="hidoc"> <i style="color: white;text-shadow: white 0px 3px 8px;"> Say Hi..to our PDF-Baba </i></h2>
+            </div>
+        </div>
+
+        <div class="input-page" id="input-page">
+            <div class="choose-file">          
+                <div class="add-more-files">
+                    <h3> <i style="color: orange;text-shadow: orange 0px 3px 8px;"> Upload your images here....... </i></h3>
+                    <div class="inp-container">
+                        <input type="file" id="upload-file" onChange={encodeImageFileAsURL(this)} multiple accept="image/"/>
+                        <h4 class="drop">
+                            <i>Drag & drop or</i> 
+                        </h4>
+                        <p >
+                            <i class="fa fa-file-image-o fa-4x img-icon"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-plus fa-2x img-icon"></i>
+                            
+                        </p>
+                        <label htmlFor="upload-file" id="custom-file"> <i style="font-style: oblique;">Choose files...</i> </label>
+                    </div>
+                </div>            
+            </div>
+        </div>
+
+        <div class="pdf-page" id="pdf-page">             
+            <div class="create-pdf" id="create-pdf"> 
+                    
+            </div>
+        </div>
+
+        <script src="pdf.js" type="text/javascript"></script>
+    </body>
+    </html>
+    
